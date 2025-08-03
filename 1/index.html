@@ -278,65 +278,6 @@
         </div>
     </div>
     <script src="validate.js"></script>
-    <script>
-        // $(document).ready(function () {
-        //     $('form').on('submit', function (e) {
-        //         var formValid = true;
-        //         var name = $(this).find('input[type="text"]').eq(0).val().trim();
-        //         var email = $(this).find('input[type="email"]').val().trim();
-        //         var address = $(this).find('textarea').val().trim();
-        //         var phone = $(this).find('input[type="text"]').eq(1).val().trim();
-
-        //         $('.error-msg').remove();
-
-        //         if (name === "") {
-        //             $(this).find('input[type="text"]').eq(0).after('<div class="text-danger error-msg">Name is required</div>');
-        //             formValid = false;
-        //         }
-        //         if (email === "") {
-        //             $(this).find('input[type="email"]').after('<div class="text-danger error-msg">Email is required</div>');
-        //             formValid = false;
-        //         }
-        //         if (address === "") {
-        //             $(this).find('textarea').after('<div class="text-danger error-msg">Address is required</div>');
-        //             formValid = false;
-        //         }
-        //         if (!/^0\d{9}$/.test(phone)) {
-        //             $(this).find('input[type="text"]').eq(1).after('<div class="text-danger error-msg">Phone must start with 0 and be 10 digits</div>');
-        //             formValid = false;
-        //         }
-
-        //         if (!formValid) {
-        //             e.preventDefault(); // chặn submit nếu có lỗi
-        //         }
-        //     });
-        // });
-
-        // $(document).ready(function () {
-        //     var $tbody = $("table tbody");
-
-        //     function renderEmployees(data) {
-        //         $tbody.empty();
-        //         $.each(data, function (index, employee) {
-        //             var row = '<tr>' +
-        //                 '<td><span class="custom-checkbox"><input type="checkbox" id="checkbox' + employee.id + '" name="options[]" value="' + employee.id + '"><label for="checkbox' + employee.id + '"></label></span></td>' +
-        //                 '<td>' + employee.name + '</td>' +
-        //                 '<td>' + employee.email + '</td>' +
-        //                 '<td>' + employee.address + '</td>' +
-        //                 '<td>' + employee.phone + '</td>' +
-        //                 '<td>' +
-        //                 '<a href="#editEmployeeModal" class="edit" data-toggle="modal"><i class="material-icons" title="Edit">&#xE254;</i></a>' +
-        //                 '<a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" title="Delete">&#xE872;</i></a>' +
-        //                 '</td>' +
-        //                 '</tr>';
-        //             $tbody.append(row);
-        //         });
-        //     }
-
-        //     renderEmployees(employeeData);
-        // });
-    </script>
-
 </body>
 
 </html>
