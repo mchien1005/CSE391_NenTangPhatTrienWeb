@@ -37,7 +37,7 @@
         <a href="#" class="nav-item secondary"><i class="bi bi-upload" style="font-size: 18px;"></i> XUẤT RA FILE ></a>
         <div class="search-container">
             <button style="font-weight: 1000; height: 32px; width: 40px; border: none;">></button>
-            <input type="text" class="search-box" placeholder="Tìm kiếm giao dịch" style="height: 32px;">
+            <input type="text" class="search-box" placeholder="Tìm kiếm theo Tên" style="height: 32px;">
             <button class="search-btn" style="padding: 0 15px;"><i class="bi bi-search"></i></button>
             <div style="display: flex; align-items: center; gap: 10px; margin-left: 500px; font-size: 14px;">
                 <div style="text-align: right;">
@@ -45,9 +45,9 @@
                     <div>quả</div>
                 </div>
                 <select style="padding-right:50px; padding-left: 20px; font-size: 14px; height: 32px; ">
-                    <option>5</option>
-                    <option>10</option>
                     <option>20</option>
+                    <option>10</option>
+                    <option>30</option>
                     <option>50</option>
                 </select>
             </div>
@@ -59,12 +59,12 @@
             <thead>
                 <tr>
                     <th style="width: 110px; padding-left: 30px;">
-                        <span class="header-x">✕</span>
+                        <span class="header-x">&#9660</span>
                     </th>
                     <th>Hành động</th>
                     <th>
                         <div class="th-content">
-                            ID
+                            STT
                             <span class="sort-icons">
                                 <span>▲</span>
                                 <span>▼</span>
@@ -73,7 +73,7 @@
                     </th>
                     <th>
                         <div class="th-content">
-                            Khách hàng
+                            Tên
                             <span class="sort-icons">
                                 <span>▲</span>
                                 <span>▼</span>
@@ -82,7 +82,7 @@
                     </th>
                     <th>
                         <div class="th-content">
-                            Nhân viên
+                            Họ đệm
                             <span class="sort-icons">
                                 <span>▲</span>
                                 <span>▼</span>
@@ -91,7 +91,7 @@
                     </th>
                     <th>
                         <div class="th-content">
-                            Số tiền
+                            Địa chỉ
                             <span class="sort-icons">
                                 <span>▲</span>
                                 <span>▼</span>
@@ -100,7 +100,7 @@
                     </th>
                     <th>
                         <div class="th-content">
-                            Ngày mua
+                            Hoạt động
                             <span class="sort-icons">
                                 <span>▲</span>
                                 <span>▼</span>
@@ -119,11 +119,11 @@
                             <button class="btn-icon btn-delete"><i class="bi bi-plus-circle-fill"></i></button>
                         </div>
                     </td>
-                    <td>1102</td>
-                    <td>Vũ Hoài An</td>
-                    <td>Mai Thục Anh</td>
-                    <td>250,000</td>
-                    <td>06 Tháng 5 2024 6:00</td>
+                    <td>1</td>
+                    <td>Mai</td>
+                    <td>Thục Anh</td>
+                    <td>23 Hoàng Đạo Thuý, Thanh Xuân, Hà Nội</td>
+                    <td class="custom-td"><span class="icon-check">&#10003;</span></td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" class="checkbox"></td>
@@ -134,11 +134,11 @@
                             <button class="btn-icon btn-delete"><i class="bi bi-plus-circle-fill"></i></button>
                         </div>
                     </td>
-                    <td>1199</td>
-                    <td>Hoàng Thị Thắng</td>
-                    <td>Nguyễn Văn Hồng</td>
-                    <td>600,000</td>
-                    <td>06 Tháng 5 2024 7:03</td>
+                    <td>2</td>
+                    <td>Hoàng</td>
+                    <td>Sinh Hồng</td>
+                    <td>23 Hoàng Đạo Thuý, Thanh Xuân, Hà Nội</td>
+                    <td class="custom-td"><span class="icon-x">&#10007;</span></td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" class="checkbox"></td>
@@ -149,11 +149,11 @@
                             <button class="btn-icon btn-delete"><i class="bi bi-plus-circle-fill"></i></button>
                         </div>
                     </td>
-                    <td>1239</td>
-                    <td>Nguyễn Huy Quâng</td>
-                    <td>Nguyễn Văn Hồng</td>
-                    <td>934,000</td>
-                    <td>06 Tháng 5 2024 8:10</td>
+                    <td>3</td>
+                    <td>Tính</td>
+                    <td>Mai Trung</td>
+                    <td>1411 Đường Láng, Cầu Giấy, Hà Nội</td>
+                    <td class="custom-td"><span class="icon-check">&#10003;</span></td>
                 </tr>
                 <tr>
                     <td><input type="checkbox" class="checkbox"></td>
@@ -164,47 +164,22 @@
                             <button class="btn-icon btn-delete"><i class="bi bi-plus-circle-fill"></i></button>
                         </div>
                     </td>
-                    <td>1677</td>
-                    <td>Huỳnh Văn Nam</td>
-                    <td>Mai Thục Anh</td>
-                    <td>190,000</td>
-                    <td>06 Tháng 5 2024 4:20</td>
+                    <td>4</td>
+                    <td>Hồng</td>
+                    <td>Nguyễn Văn</td>
+                    <td>1411 Đường Láng, Cầu Giấy, Hà Nội</td>
+                    <td class="custom-td"><span class="icon-x">&#10007;</span></td>
                 </tr>
-                <tr>
-                    <td><input type="checkbox" class="checkbox"></td>
-                    <td>
-                        <div class="action-buttons">
-                            <button class="btn-icon btn-view"><i class="bi bi-eye-fill"></i></button>
-                            <button class="btn-icon btn-edit"><i class="bi bi-pencil-fill"></i></button>
-                            <button class="btn-icon btn-delete"><i class="bi bi-plus-circle-fill"></i></button>
-                        </div>
-                    </td>
-                    <td>1439</td>
-                    <td>Nguyễn Hồng Minh</td>
-                    <td>Mai Thục Anh</td>
-                    <td>354,000</td>
-                    <td>06 Tháng 5 2024 4:24</td>
-                </tr>
+
             </tbody>
         </table>
 
-        <button class="delete-btn"><i class="bi bi-plus-circle-fill"></i> DELETE SELECTED RECORDS</button>
-        <div class="border-bottom-1"></div>
+        <!-- <button class="delete-btn"><i class="bi bi-plus-circle-fill"></i> DELETE SELECTED RECORDS</button> -->
 
         <div class="pagination">
             <div class="page-numbers">
-                <div class="page-number">Trang</div>
-                <a href="#" class="page-number active">1</a>
-                <a href="#" class="page-number">2</a>
-                <a href="#" class="page-number">3</a>
-                <a href="#" class="page-number">4</a>
-                <a href="#" class="page-number">5</a>
-                <a href="#" class="page-number">6</a>
-                <a href="#" class="page-number">7</a>
-                <a href="#" class="page-number">></a>
-                <a href="#" class="page-number">»</a>
             </div>
-            <div class="page-info">Kết quả 1 trong 20 trang</div>
+            <div class="page-info">Kết quả 1 đến 4</div>
         </div>
     </div>
 
@@ -220,22 +195,22 @@
             <div class="modal-content" style="width: 400px; color: #2f4e6e;">
                 <form id="addForm">
                     <div class="modal-header" style="margin: auto 10px;">
-                        <h4 class="modal-title">Thêm giao dịch</h4>
+                        <h4 class="modal-title">Thêm Nhân viên</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
                             style="margin-left: 100px;">&times;</button>
                     </div>
                     <div class="modal-body" style="margin: auto 10px;">
                         <div class="form-group">
-                            <label>Khách hàng</label>
-                            <input type="text" class="form-control" id="khachHang" name="khachHang">
+                            <label>Tên</label>
+                            <input type="text" class="form-control" id="ten" name="ten">
                         </div>
                         <div class="form-group">
-                            <label>Nhân viên</label>
-                            <input type="text" class="form-control" id="nhanVien" name="nhanVien">
+                            <label>Họ đệm</label>
+                            <input type="text" class="form-control" id="hoDem" name="hoDem">
                         </div>
                         <div class="form-group">
-                            <label>Số tiền</label>
-                            <input type="text" class="form-control" id="soTien" name="soTien">
+                            <label>Địa chỉ</label>
+                            <input type="text" class="form-control" id="diaChi" name="diaChi">
                         </div>
                     </div>
                     <div class="modal-footer" style="padding-right:20px;">

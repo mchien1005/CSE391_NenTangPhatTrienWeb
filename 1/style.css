@@ -278,3 +278,10 @@
       background-color: #5cb85c;
       color: #fff;
   }
+
+  label.error {
+      color: red;
+      font-size: 13px;
+      margin-top: 5px;
+      display: block;
+  }

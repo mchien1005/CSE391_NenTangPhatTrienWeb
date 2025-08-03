@@ -16,7 +16,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="data.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
 
 </head>
 
@@ -186,7 +187,7 @@
     <div id="addEmployeeModal" class="modal fade">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form>
+                <form id="addEmployeeForm">
                     <div class="modal-header">
                         <h4 class="modal-title">Add Employee</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
@@ -195,19 +196,19 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label>Name</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="name" id="name">
                         </div>
                         <div class="form-group">
                             <label>Email</label>
-                            <input type="email" class="form-control">
+                            <input type="email" class="form-control" name="email" id="email">
                         </div>
                         <div class="form-group">
                             <label>Address</label>
-                            <textarea class="form-control"></textarea>
+                            <textarea class="form-control" name="address" id="address"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Phone</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" name="phone" id="phone">
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -215,6 +216,7 @@
                         <input type="submit" class="btn btn-success" value="Add">
                     </div>
                 </form>
+
             </div>
         </div>
     </div>
@@ -275,39 +277,40 @@
             </div>
         </div>
     </div>
+    <script src="validate.js"></script>
     <script>
-        $(document).ready(function () {
-            $('form').on('submit', function (e) {
-                var formValid = true;
-                var name = $(this).find('input[type="text"]').eq(0).val().trim();
-                var email = $(this).find('input[type="email"]').val().trim();
-                var address = $(this).find('textarea').val().trim();
-                var phone = $(this).find('input[type="text"]').eq(1).val().trim();
+        // $(document).ready(function () {
+        //     $('form').on('submit', function (e) {
+        //         var formValid = true;
+        //         var name = $(this).find('input[type="text"]').eq(0).val().trim();
+        //         var email = $(this).find('input[type="email"]').val().trim();
+        //         var address = $(this).find('textarea').val().trim();
+        //         var phone = $(this).find('input[type="text"]').eq(1).val().trim();
 
-                $('.error-msg').remove();
+        //         $('.error-msg').remove();
 
-                if (name === "") {
-                    $(this).find('input[type="text"]').eq(0).after('<div class="text-danger error-msg">Name is required</div>');
-                    formValid = false;
-                }
-                if (email === "") {
-                    $(this).find('input[type="email"]').after('<div class="text-danger error-msg">Email is required</div>');
-                    formValid = false;
-                }
-                if (address === "") {
-                    $(this).find('textarea').after('<div class="text-danger error-msg">Address is required</div>');
-                    formValid = false;
-                }
-                if (!/^0\d{9}$/.test(phone)) {
-                    $(this).find('input[type="text"]').eq(1).after('<div class="text-danger error-msg">Phone must start with 0 and be 10 digits</div>');
-                    formValid = false;
-                }
+        //         if (name === "") {
+        //             $(this).find('input[type="text"]').eq(0).after('<div class="text-danger error-msg">Name is required</div>');
+        //             formValid = false;
+        //         }
+        //         if (email === "") {
+        //             $(this).find('input[type="email"]').after('<div class="text-danger error-msg">Email is required</div>');
+        //             formValid = false;
+        //         }
+        //         if (address === "") {
+        //             $(this).find('textarea').after('<div class="text-danger error-msg">Address is required</div>');
+        //             formValid = false;
+        //         }
+        //         if (!/^0\d{9}$/.test(phone)) {
+        //             $(this).find('input[type="text"]').eq(1).after('<div class="text-danger error-msg">Phone must start with 0 and be 10 digits</div>');
+        //             formValid = false;
+        //         }
 
-                if (!formValid) {
-                    e.preventDefault(); // chặn submit nếu có lỗi
-                }
-            });
-        });
+        //         if (!formValid) {
+        //             e.preventDefault(); // chặn submit nếu có lỗi
+        //         }
+        //     });
+        // });
 
         // $(document).ready(function () {
         //     var $tbody = $("table tbody");
