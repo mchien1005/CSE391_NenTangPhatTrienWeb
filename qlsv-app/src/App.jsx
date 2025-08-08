@@ -1,31 +1,42 @@
-import { useState } from "react";
-import Header from "./Header";
-import StudentForm from "./StudentForm";
-import StudentTable from "./StudentTable";
+import React, { useEffect, useState } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import studentsData from './data';
+import StudentList from './components/StudentList';
+import StudentForm from './components/StudentForm';
 
-function App() {
-  const [danhSach, setDanhSach] = useState([
-    { ten: "Nguyễn Văn A", email: "a@gmail.com" }
-  ]);
-  const [isShowForm, setIsShowForm] = useState(false);
+export default function App() {
+  const [ready, setReady] = useState(false);
 
-  function handleAdd(sv) {
-    setDanhSach([...danhSach, sv]);
+  useEffect(() => {
+    // Nạp dữ liệu mẫu vào localStorage nếu chưa có
+    const existing = localStorage.getItem('students');
+    if (!existing) {
+      localStorage.setItem('students', JSON.stringify(studentsData));
+    }
+    setReady(true);
+  }, []);
+
+  if (!ready) {
+    return <div>Đang khởi tạo dữ liệu…</div>;
   }
 
   return (
-    <div style={{  maxWidth: 500, margin: "40px auto",  padding: 20, border: "1px solid #ccc", borderRadius: 8 }}>
-      <Header />
+    <div className="container mt-4">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="/">Quản lý Sinh viên</a>
+          <div>
+            <Link className="btn btn-outline-primary me-2" to="/">Danh sách</Link>
+            <Link className="btn btn-primary" to="/add">Thêm sinh viên</Link>
+          </div>
+        </div>
+      </nav>
 
-      <button onClick={() => setIsShowForm(!isShowForm)} style={{ marginBottom: 10 }}>
-        {isShowForm ? "Đóng Form" : "Thêm sinh viên"}
-      </button>
-
-      {isShowForm && <StudentForm onAdd={handleAdd} />}
-
-      <StudentTable danhSach={danhSach} />
+      <Routes>
+        <Route path="/" element={<StudentList />} />
+        <Route path="/add" element={<StudentForm />} />
+        <Route path="/edit/:id" element={<StudentForm editMode />} />
+      </Routes>
     </div>
   );
 }
-
-export default App;
