@@ -3,6 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import studentsData from './data';
 import StudentList from './components/StudentList';
 import StudentForm from './components/StudentForm';
+import Stats from './components/Stats';
 
 export default function App() {
   const [ready, setReady] = useState(false);
@@ -33,7 +34,7 @@ export default function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<StudentList />} />
+        <Route path="/" element={<><Stats /><StudentList /></>} />
         <Route path="/add" element={<StudentForm />} />
         <Route path="/edit/:id" element={<StudentForm editMode />} />
       </Routes>
